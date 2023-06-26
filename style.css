@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+.card-container {
+    width: 35vw;
+    height: 60vh;
+    border: 1px solid black;
+}
+
+.header {
+    height: 50%;
+    width: 100%;
+    background-image: url('./assets/images/images\ \(2\).jpeg');
+    background-size: cover;
+}
+
+.card {
+    display: flex;
+    font-size: 16px;
+    height: 50%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: -15%;
+}
+
+.links {
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+    margin-bottom: 5%;
+}
+
+.links p {
+    font-weight: bold;
+}
+
+.links span {
+    color: grey;
+}
