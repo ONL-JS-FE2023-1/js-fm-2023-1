@@ -16,13 +16,13 @@
         <input type="text" placeholder="Email" name="email" id="email" autofocus> -->
         <label>
             Type your email:
-            <input type="text" placeholder="example@mail.com" name="email" autofocus>
+            <input type="text" placeholder="example@mail.com" name="email" autofocus pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+">
         </label>
         <!-- <label for="password">Type your password</label>
         <input type="password" placeholder="Password" name="password" id="password"> -->
         <label>
             Type your password:
-            <input type="password" placeholder="qwerty1234" name="password">
+            <input type="text" placeholder="qwerty1234" name="password" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$">
         </label>
 
         <button type="submit">Login!</button>
