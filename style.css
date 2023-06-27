@@ -1,5 +1,16 @@
-.form {
+form {
     display: flex;
     flex-direction: column;
-    max-width: 200px;
+    max-width: 300px;
+    margin: 0 auto;
+    /* max-width: 200px;  <<<<----- в цьому разі, не потрібне буде настпне правило (label, input) */
+}
+
+label, input {
+    display: block;
+}
+
+input, button {
+    padding: 10px 20px;
+    font-size: 16px;
 }

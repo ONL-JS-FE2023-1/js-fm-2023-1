@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,27 +8,47 @@
     <link rel="stylesheet" href="./style.css">
     <title>Document</title>
 </head>
+
 <body>
-    
-    <form class="form" action="/test-direction" method="GET">
-        <h2>Login</h2>
-
-        <!-- <label for="email">Type your email: </label>
-        <input type="text" placeholder="Email" name="email" id="email" autofocus> -->
+    <!-- div потрібен для центрування форми -->
+    <form>
         <label>
-            Type your email:
-            <input type="text" placeholder="example@mail.com" name="email" autofocus pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+">
-        </label>
-        <!-- <label for="password">Type your password</label>
-        <input type="password" placeholder="Password" name="password" id="password"> -->
-        <label>
-            Type your password:
-            <input type="text" placeholder="qwerty1234" name="password" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$">
+            Ім'я
+            <input type="text" name="username" placeholder="Вадим" autofocus>
         </label>
 
-        <button type="submit">Login!</button>
-        <button type="reset">Reset</button>
+        <label>
+            Електронна пошта:
+            <input type="text" name="email" placeholder="example@email.com"
+                pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+">
+        </label>
+
+        <label>
+            Пароль:
+            <input type="password" name="password" placeholder="qwerty1234"
+                pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$">
+        </label>
+
+        <label>
+            Телефон:
+            <input type="text" name="phone" placeholder="0995874135"
+                pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$">
+        </label>
+
+        <label>
+            Адреса:
+            <input type="text" name="address" placeholder="вул. Микитинська, буд...">
+        </label>
+
+        <label>
+            Дата народження:
+            <input type="text" placeholder="14.09.2005" name="birthdate">
+        </label>
+
+        <button type="submit">Зареєструватися</button>
+        <button type="reset">Очистити</button>
     </form>
 
 </body>
+
 </html>
