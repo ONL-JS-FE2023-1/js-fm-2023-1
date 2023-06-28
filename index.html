@@ -11,23 +11,27 @@
 
 <body>
     <form>
-        <label>
-            Ім'я
-            <input type="text" name="username" placeholder="Вадим" autofocus>
-        </label>
+        <fieldset>
+            <legend>Auth Info</legend>
 
-        <label>
-            Електронна пошта <span class="required"></span>:
-            <!-- регулярка взята з ihateregex -->
-            <input type="text" name="email" placeholder="example@email.com"
-                pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+" required>
-        </label>
-
-        <label>
-            Пароль <span class="required"></span>:
-            <!-- регулярка взята з ihateregex -->
-            <input type="password" name="password" placeholder="qwerty1234" required>
-        </label>
+            <label>
+                Ім'я
+                <input type="text" name="username" placeholder="Вадим" autofocus>
+            </label>
+    
+            <label>
+                Електронна пошта <span class="required"></span>:
+                <!-- регулярка взята з ihateregex -->
+                <input type="text" name="email" placeholder="example@email.com"
+                    pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+" required>
+            </label>
+    
+            <label>
+                Пароль <span class="required"></span>:
+                <!-- регулярка взята з ihateregex -->
+                <input type="password" name="password" placeholder="qwerty1234" required>
+            </label>
+        </fieldset>
 
         <label>
             Телефон:
@@ -68,6 +72,24 @@
             <input type="checkbox" name="isLike">
             Чи подобається Вам наш сайт?
         </label>
+
+        <fieldset>
+            <legend>Choose your avatar</legend>
+            <input type="file" multiple>
+        </fieldset>
+
+        <fieldset>
+            <legend>Choose your city</legend>
+            <select name="city">
+                <option value="Kyiv">Kyiv</option>
+                <optgroup label="Dnipropetrovska obl.">
+                    <option value="Dnipro">Dnipro</option>
+                    <option value="Kryvyi-Rig">Kryvyi Rig</option>
+                    <option value="Pavlograd">Pavlograd</option>
+                </optgroup>
+                <option value="Kharkiv">Kharkiv</option>
+            </select>
+        </fieldset>
 
         <button type="submit">Зареєструватися</button>
         <button type="reset">Очистити</button>
