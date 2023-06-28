@@ -10,7 +10,6 @@
 </head>
 
 <body>
-    <!-- div потрібен для центрування форми -->
     <form>
         <label>
             Ім'я
@@ -18,19 +17,21 @@
         </label>
 
         <label>
-            Електронна пошта:
+            Електронна пошта <span class="required"></span>:
+            <!-- регулярка взята з ihateregex -->
             <input type="text" name="email" placeholder="example@email.com"
-                pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+">
+                pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+" required>
         </label>
 
         <label>
-            Пароль:
-            <input type="password" name="password" placeholder="qwerty1234"
-                pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$">
+            Пароль <span class="required"></span>:
+            <!-- регулярка взята з ihateregex -->
+            <input type="password" name="password" placeholder="qwerty1234" required>
         </label>
 
         <label>
             Телефон:
+            <!-- регулярка взята з ihateregex -->
             <input type="text" name="phone" placeholder="0995874135"
                 pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$">
         </label>
@@ -42,7 +43,30 @@
 
         <label>
             Дата народження:
-            <input type="text" placeholder="14.09.2005" name="birthdate">
+            <input type="date" placeholder="14.09.2005" name="birthdate">
+        </label>
+
+        <h2>Оберіть свою стать</h2>
+        <label>
+            <input type="radio" value="Male" name="gender" />
+            Male
+        </label>
+        <label>
+            <input type="radio" value="Female" name="gender" />
+            Female
+        </label>
+        <label>
+            <input type="radio" value="Nonbinary" name="gender" checked />
+            Nonbinary
+        </label>
+
+        <label>
+            <input type="checkbox" name="isSubscribed">
+            Чи погоджуєтесь Ви отримувати від нас розсилку по вихідним?
+        </label>
+        <label>
+            <input type="checkbox" name="isLike">
+            Чи подобається Вам наш сайт?
         </label>
 
         <button type="submit">Зареєструватися</button>
