@@ -5,8 +5,72 @@ rem - relative em (root em)
 */
 /* rem */
 
+/* 
+1. Наведіть порядок
+Контент розташовується або по центру екрану, або в лівій/правій частині)
+
+!2. Розібратися з nav-меню.
+Його потрібно розтягнути на всю ширину ерану, щоб був красивий простір між посиланнями
+Виключити підкреслення посилань + змінити колір
+
+!!3. На власний розсуд використайте медіа-запити
+*/
+
 :root {
     font-size: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+fieldset {
+    margin-bottom: 20px;
+    /* border: none; */
+}
+
+legend {
+    background-color: #000;
+    color: #fff;
+    padding: 3px 6px;
+    margin-bottom: 10px;
+}
+
+label {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+input {
+    margin-left: 10px;
+}
+
+select, textarea {
+    width: 100%;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: green;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(3, 90, 3);
 }
 
 li {
@@ -21,4 +85,25 @@ ul {
 
 li {
     font-size: 2rem;
+}
+
+img {
+    border: 2px solid black;
+    padding: 5px;
+}
+
+/* min-width - більші ніж (включно) */
+/* max-width - менші ніж (включно) */
+@media screen and (min-width: 300px) and (max-width: 500px) {
+    li {
+        display: block;
+        background-color: green;
+    }
+}
+
+@media screen and (max-width: 200px) {
+    li {
+        display: block;
+        background-color: blue;
+    }
 }
