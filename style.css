@@ -1,61 +1,24 @@
-@font-face {
-    font-family: 'Shantell Sans';
-    src: url('./fonts/ShantellSans-VariableFont_BNCE\,INFM\,SPAC\,wght.ttf') format('TrueType');
+/* 1em = 1 parent font-size
+rem - relative em (root em)
+1 rem = 1 font-size root
+
+*/
+/* rem */
+
+:root {
+    font-size: 10px;
 }
 
-body {
-    font-family: 'Shantell Sans', cursive;
+li {
+    display: inline-block;
+    background-color: red;
+    padding: 10px;
 }
 
-h1 {
-    text-align: center;
+ul {
+    font-size: 0;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-fieldset {
-    margin-bottom: 20px;
-    /* border: none; */
-}
-
-legend {
-    background-color: #000;
-    color: #fff;
-    padding: 3px 6px;
-    margin-bottom: 10px;
-}
-
-label {
-    display: flex;
-    margin-bottom: 10px;
-}
-
-input {
-    margin-left: 10px;
-}
-
-select, textarea {
-    width: 100%;
-}
-
-textarea {
-    resize: none;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: green;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: rgb(3, 90, 3);
+li {
+    font-size: 2rem;
 }
