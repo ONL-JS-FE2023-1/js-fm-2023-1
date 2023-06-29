@@ -10,97 +10,105 @@
 </head>
 
 <body>
+    <h1>Форма зворотнього зв'язку</h1>
+
     <form>
+
         <fieldset>
-            <legend>Auth Info</legend>
+            <legend>Особисті дані</legend>
 
             <label>
-                Ім'я
-                <input type="text" name="username" placeholder="Вадим" autofocus>
+                Ім'я:
+                <input type="text" name="name" required>
             </label>
 
             <label>
-                Електронна пошта <span class="required"></span>:
-                <!-- регулярка взята з ihateregex -->
-                <input type="text" name="email" placeholder="example@email.com"
-                    pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+" required>
+                Електронна пошта:
+                <input type="email" name="email" required>
             </label>
 
             <label>
-                Пароль <span class="required"></span>:
-                <!-- регулярка взята з ihateregex -->
-                <input type="password" name="password" placeholder="qwerty1234" required>
+                Дата народження:
+                <input type="date" name="dob" required>
             </label>
-        </fieldset>
 
-        <label>
-            Телефон:
-            <!-- регулярка взята з ihateregex -->
-            <input type="text" name="phone" placeholder="0995874135"
-                pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$">
-        </label>
-
-        <label>
-            Адреса:
-            <input type="text" name="address" placeholder="вул. Микитинська, буд...">
-        </label>
-
-        <label>
-            Дата народження:
-            <input type="date" placeholder="14.09.2005" name="birthdate">
-        </label>
-
-        <h2>Оберіть свою стать</h2>
-        <label>
-            <input type="radio" value="Male" name="gender" />
-            Male
-        </label>
-        <label>
-            <input type="radio" value="Female" name="gender" />
-            Female
-        </label>
-        <label>
-            <input type="radio" value="Nonbinary" name="gender" checked />
-            Nonbinary
-        </label>
-
-        <label>
-            <input type="checkbox" name="isSubscribed">
-            Чи погоджуєтесь Ви отримувати від нас розсилку по вихідним?
-        </label>
-        <label>
-            <input type="checkbox" name="isLike">
-            Чи подобається Вам наш сайт?
-        </label>
-
-        <fieldset>
-            <legend>Choose your avatar</legend>
-            <input type="file" multiple>
         </fieldset>
 
         <fieldset>
-            <legend>Choose your city</legend>
-            <input type="text" name="city" list="city-list">
+            <legend>Стать</legend>
 
-            <datalist id="city-list">
-                <option value="Kyiv">Kyiv</option>
-                <option value="Dnipro">Dnipro</option>
-                <option value="Kryvyi-Rig">Kryvyi Rig</option>
-                <option value="Pavlograd">Pavlograd</option>
-                <option value="Kharkiv">Kharkiv</option>
-            </datalist>
+            <label>
+                <input type="radio" name="gender" value="male">
+                Чоловік
+            </label>
+
+            <label>
+                <input type="radio" name="gender" value="female">
+                Жінка
+            </label>
+
+            <label>
+                <input type="radio" name="gender" value="other">
+                Інше
+            </label>
 
         </fieldset>
 
-        <label>
-            Залиште свій відгук
-            <textarea name="text" cols="10" rows="10" maxlength="10"></textarea>
-        </label>
+        <fieldset>
+            <legend>Додаткові налаштування</legend>
 
-        <button type="submit">Зареєструватися</button>
-        <button type="reset">Очистити</button>
+            <label>
+                <input type="checkbox" name="isSubscribe" value="true">
+                Підписатися на розсилку
+            </label>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Оберіть категорію своїх інтересів</legend>
+
+            <select name="category">
+                <optgroup label="Технології">
+                    <option value="programming">Програмування</option>
+                    <option value="networking">Мережа</option>
+                </optgroup>
+
+                <optgroup label="Музика">
+                    <option value="rock">Рок</option>
+                    <option value="pop">Поп</option>
+                </optgroup>
+
+            </select>
+
+        </fieldset>
+        
+        <fieldset>
+            <legend>Як ви дізналися про нас?</legend>
+
+            <label>
+                <input type="radio" name="option" value="searchSystem" />
+                Пошукові системи
+            </label>
+            <label>
+                <input type="radio" name="option" value="socialNetworks" />
+                Соціальні мережі
+            </label>
+            <label>
+                <input type="radio" name="option" value="friends" />
+                Порада друзів/знайомих
+            </label>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Опишіть свої враження / скарги / пропозиції</legend>
+
+            <textarea name="comment"></textarea>
+
+        </fieldset>
+
+        <button type="submit">Надіслати форму</button>
     </form>
-
 </body>
 
 </html>
